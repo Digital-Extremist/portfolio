@@ -1,3 +1,4 @@
+
 /* Reset */
 * {
   margin: 0;
@@ -388,4 +389,84 @@ nav a {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+.section.dark {
+  background: #111;
+  color: #fff;
+}
+
+.services-title {
+  text-align: center;
+  color: #e60000;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+
+.services-underline {
+  width: 80px;
+  height: 4px;
+  background: #e60000;
+  margin: 0 auto 1em auto;
+  border-radius: 2px;
+}
+
+.services-desc {
+  text-align: center;
+  color: #cfd8dc;
+  margin-bottom: 2em;
+  font-size: 1.1rem;
+}
+
+.services-2x2-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2em;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: linear-gradient(135deg, #222 60%, #444 100%);
+  border-radius: 16px;
+  padding: 2em 1.5em;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid rgba(230,0,0,0.08);
+  min-height: 180px;
+}
+
+.service-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(230,0,0,0.15);
+}
+
+.service-icon {
+  display: block;
+  margin-bottom: 0.7em;
+}
+
+.service-card h3 {
+  margin: 0 0 0.5em 0;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.service-card p {
+  color: #cfd8dc;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Responsive: Stack cards on mobile */
+@media (max-width: 900px) {
+  .services-2x2-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
 }
