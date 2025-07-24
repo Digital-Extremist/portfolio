@@ -1,15 +1,35 @@
+
 /* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --bg: #000;
+  --panel: #181a20;
+  --text: #fff;
+  --accent: #e60000;
+  --panel-border: #fff;
+}
+
+body.light-mode {
+  --bg: #fff;
+  --panel: #fff;
+  --text: #181a20;
+  --accent: #e60000;
+  --panel-border: #e60000;
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #000;
-  color: #fff;
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
 }
+
 a {
   color: #e60000;
   text-decoration: none;
@@ -21,11 +41,13 @@ h2 {
 
 /* Navbar */
 .navbar {
-  background-color: #111;
+  background: var(--bg);
   padding: 15px 0;
   position: sticky;
   top: 0;
   z-index: 100;
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
 }
 .navbar .container {
   max-width: 1200px;
@@ -41,6 +63,11 @@ h2 {
 nav a {
   margin-left: 20px;
   font-weight: bold;
+  color: var(--accent);
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: var(--text);
 }
 
 /* Hero */
@@ -52,7 +79,6 @@ nav a {
   justify-content: center;
   text-align: center;
   padding-top: 10px;
-  background: none !important;
 }
 .hero-content {
   margin-top: 0;
@@ -96,6 +122,10 @@ nav a {
   padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
+  background: var(--panel);
+  color: var(--text);
+  border-color: var(--panel-border);
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
 .cards {
   display: flex;
@@ -202,9 +232,8 @@ nav a {
 .de-logo-container {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  background: transparent !important;
+  align-items: center;
+  margin: 40px 0 20px 0;
 }
 .de-logo {
   max-width: 300px;
@@ -520,4 +549,220 @@ nav a {
 .demo-btn:hover {
   background: linear-gradient(90deg, #ff69b4, #e60000);
   box-shadow: 0 0 0 3px rgba(255,105,180,0.18);
+}
+
+/* --- Skills/Services Card Grid --- */
+.services-2x2-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.service-card {
+  background: #181a20;
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+  border: 2.5px solid transparent;
+  position: relative;
+  z-index: 1;
+  animation: border-blink 1.5s infinite;
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s, border-color 0.3s;
+  color: #fff;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.service-card:hover {
+  transform: scale(1.045);
+  box-shadow: 0 8px 40px 0 rgba(230,0,0,0.18);
+  border-color: #e60000;
+  z-index: 2;
+}
+
+@keyframes border-blink {
+  0%, 100% { border-color: #e60000; }
+  50% { border-color: #fff; }
+}
+
+.service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5em;
+  width: 60px;
+  height: 60px;
+  background: rgba(230, 0, 0, 0.15);
+  border-radius: 16px;
+  border: 3px solid rgba(230, 0, 0, 0.4);
+  padding: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(230, 0, 0, 0.2);
+}
+
+.service-icon svg {
+  width: 36px;
+  height: 36px;
+  filter: drop-shadow(0 2px 6px rgba(230, 0, 0, 0.5));
+  stroke: #e60000;
+  stroke-width: 2.5;
+}
+
+.service-card:hover .service-icon {
+  background: rgba(230, 0, 0, 0.25);
+  border-color: rgba(230, 0, 0, 0.8);
+  transform: scale(1.15);
+  box-shadow: 0 6px 20px rgba(230, 0, 0, 0.4);
+}
+
+.service-card h3 {
+  color: #fff;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+.service-card p {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .services-2x2-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .service-card {
+    padding: 24px 12px;
+  }
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+  }
+  .service-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.services-2x2-only {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 32px;
+}
+
+@media (max-width: 900px) {
+  .services-2x2-only {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+#vanta-bg {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 0;
+}
+
+#home.hero {
+  background: transparent !important;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+#vanta-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+.neon-grid-bg {
+  width: 100vw;
+  height: 350px;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  perspective: 800px;
+  margin: 0;
+  padding: 0;
+}
+
+.neon-grid-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(to right, transparent 0 38px, #e60000 39px 41px, transparent 42px 80px),
+    repeating-linear-gradient(to bottom, transparent 0 38px, #e60000 39px 41px, transparent 42px 80px);
+  opacity: 0.7;
+  filter: drop-shadow(0 0 6px #e60000) drop-shadow(0 0 12px #e60000);
+  transform: perspective(800px) rotateX(60deg) scaleY(1.2);
+  animation: grid-move 4s linear infinite;
+  z-index: 1;
+}
+
+@keyframes grid-move {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 0 80px, 80px 0;
+  }
+}
+
+.neon-grid-bg::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 60px;
+  background: linear-gradient(to bottom, #e60000cc 0%, transparent 100%);
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.neon-icon {
+  width: 80px;
+  height: auto;
+  animation: blink-glow 1.5s infinite;
+  filter: drop-shadow(0 0 10px red);
+}
+
+@keyframes blink-glow {
+  0%, 100% { opacity: 1; filter: drop-shadow(0 0 10px red); }
+  50% { opacity: 0.6; filter: drop-shadow(0 0 5px red); }
+}
+
+#theme-toggle {
+  background: none;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  border-radius: 50%;
+  font-size: 1.3rem;
+  margin-left: 24px;
+  cursor: pointer;
+  padding: 6px 10px;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+body.light-mode #theme-toggle {
+  color: var(--text);
+  border-color: var(--panel-border);
+  background: var(--accent);
 }

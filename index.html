@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital Extremist | Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -20,14 +25,12 @@
       </nav>
     </div>
   </header>
-  <!-- Add this just before the Home section -->
-<div id="vanta-bg">
-  <div class="de-logo-container">
-    <img src="images/de-logo.jpg" alt="DE Digital Extremist Logo" class="de-logo" />
-  </div>
-  <div class="animated-gradient-bar"></div>
-  <!-- Home Section -->
-  <section id="home" class="hero">
+  <div id="vanta-bg">
+    <section id="home" class="hero">
+<div class="de-logo-container">
+  <img src="images/de-logo.jpg" alt="DE Digital Extremist Logo" class="de-logo" />
+</div>
+<div class="animated-gradient-bar"></div>
     <div class="hero-content">
       <h1 class="color-loop">Empowering Digital Visions <br> with Scalable, Creative Tech</h1>
       <p>Hi, I'm the force behind <strong>Digital Extremist</strong> – a tech freelancer and startup founder building modern, impactful software solutions.</p>
@@ -36,7 +39,7 @@
       </div>
     </div>
   </section>
-</div>
+  </div>
   <!-- About Section -->
   <section id="about" class="section about-section">
     <h2 class="about-title">About <span>Digital Extremist</span></h2>
@@ -69,111 +72,85 @@
 
   <!-- Skills Section -->
   <section id="skills" class="section dark">
-    <h2><span>Technical Skills</span></h2>
-    <p>Cutting-edge technologies and methodologies to deliver exceptional results</p>
-    <div class="cards">
-      <div class="card">
+    <h2 class="services-title">Technical Skills</h2>
+    <div class="services-underline"></div>
+    <p class="services-desc">Cutting-edge technologies and methodologies to deliver exceptional results</p>
+    <div class="services-2x2-grid">
+      <div class="service-card">
+        <div class="icon-container">
+          <img src="images/5cd7ccf9-62cc-4033-852b-7f6a632fead1.png" alt="Full Stack Developer Icon" class="neon-icon" />
+        </div>
         <h3>Full-Stack Development</h3>
-        <p>React, Node.js, TypeScript, and modern web development</p>
+        <p>Modern web applications with React, Node.js, and TypeScript</p>
       </div>
-      <div class="card">
+      <div class="service-card">
+        <div class="icon-container">
+          <img src="images/devops.png" alt="DevOps Icon" class="neon-icon" />
+        </div>
         <h3>DevOps</h3>
         <p>Jenkins, Docker, Git & GitHub automation and deployment</p>
       </div>
-      <div class="card">
+      <div class="service-card">
+        <div class="icon-container">
+          <img src="images/cloud computing.png" alt="Cloud Computing Icon" class="neon-icon" />
+        </div>
         <h3>Cloud Computing</h3>
         <p>AWS infrastructure, scaling, and cloud architecture</p>
       </div>
-      <div class="card">
+      <div class="service-card">
+        <div class="icon-container">
+          <img src="images/linux systems.png" alt="Linux Systems Icon" class="neon-icon" />
+        </div>
         <h3>Linux Systems</h3>
         <p>Ubuntu, Kali Linux, Tails OS administration</p>
       </div>
-      <div class="card">
+      <div class="service-card">
+        <div class="icon-container">
+          <img src="images/penetration testing.png" alt="Penetration Testing Icon" class="neon-icon" />
+        </div>
         <h3>Penetration Testing</h3>
         <p>Security auditing with Nmap and ethical hacking</p>
       </div>
-      <div class="card">
+      <div class="service-card">
+        <div class="icon-container">
+          <img src="images/database management.png" alt="Database Management Icon" class="neon-icon" />
+        </div>
         <h3>Database Management</h3>
         <p>SQL/NoSQL database design and optimization</p>
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
-<section id="skills" class="section dark">
-  <h2 class="services-title">Technical Skills</h2>
-  <div class="services-underline"></div>
-  <p class="services-desc">Cutting-edge technologies and methodologies to deliver exceptional results</p>
-  <div class="services-2x2-grid">
-    <div class="service-card">
-      <h3>Full-Stack Development</h3>
-      <p>Modern web applications with React, Node.js, and TypeScript</p>
-    </div>
-    <div class="service-card">
-      <h3>DevOps</h3>
-      <p>Jenkins, Docker, Git & GitHub automation and deployment</p>
-    </div>
-    <div class="service-card">
-      <h3>Cloud Computing</h3>
-      <p>AWS infrastructure, scaling, and cloud architecture</p>
-    </div>
-    <div class="service-card">
-      <h3>Linux Systems</h3>
-      <p>Ubuntu, Kali Linux, Tails OS administration</p>
-    </div>
-    <div class="service-card">
-      <h3>Penetration Testing</h3>
-      <p>Security auditing with Nmap and ethical hacking</p>
-    </div>
-    <div class="service-card">
-      <h3>Database Management</h3>
-      <p>SQL/NoSQL database design and optimization</p>
-    </div>
-  </div>
-</section>
-
   <!-- Services Section -->
 <section id="services" class="section dark">
   <h2 class="services-title">Services Offered</h2>
   <div class="services-underline"></div>
   <p class="services-desc">Comprehensive digital solutions tailored to your business needs</p>
-  <div class="services-2x2-grid">
+  <div class="services-2x2-only">
     <div class="service-card">
-      <span class="service-icon">
-        <!-- Palette SVG -->
-        <svg width="36" height="36" fill="none" stroke="#e60000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="7.5" cy="10.5" r="1"/><circle cx="16.5" cy="10.5" r="1"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/></svg>
-      </span>
+      <div class="icon-container">
+        <img src="images/ChatGPT Image Jul 23, 2025, 07_49_58 PM.png" alt="Portfolio Website Design Icon" class="neon-icon" />
+      </div>
       <h3>Portfolio Website Design</h3>
       <p>Custom, responsive websites that showcase your brand</p>
     </div>
     <div class="service-card">
-      <span class="service-icon">
-        <!-- Mobile SVG -->
-        <svg width="36" height="36" fill="none" stroke="#e60000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><circle cx="12" cy="18" r="1"/></svg>
-      </span>
+      <div class="icon-container">
+        <img src="images/app design developement.png" alt="App Design & Development Icon" class="neon-icon" />
+      </div>
       <h3>App Design & Development</h3>
       <p>Mobile and web applications built for performance</p>
     </div>
     <div class="service-card">
-      <span class="service-icon">
-        <!-- Gear SVG -->
-        <svg width="36" height="36" fill="none" stroke="#e60000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.09A1.65 1.65 0 0 0 12 4.6V4a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.09a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-      </span>
       <h3>Website Maintenance</h3>
       <p>Ongoing support, updates, and optimization</p>
     </div>
     <div class="service-card">
-      <span class="service-icon">
-        <!-- Cloud SVG -->
-        <svg width="36" height="36" fill="none" stroke="#e60000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 5.5 5.5 0 0 0-10.9 1.5A4.5 4.5 0 0 0 6.5 19h11z"/></svg>
-      </span>
       <h3>Storage Solutions</h3>
       <p>Cloud setup, management, and data architecture</p>
     </div>
   </div>
 </section>
-
-
 
   <!-- Portfolio Section -->
   <section id="portfolio" class="section dark">
@@ -181,13 +158,13 @@
     <p>Innovative solutions that showcase our technical expertise and creative vision</p>
     <div class="projects">
       <div class="project">
-        <img src="images/image.png" alt="StayGreenPolymers" />
+        <img src="images/project1.jpg" alt="StayGreenPolymers" />
         <h3>StayGreenPolymers Website</h3>
         <p>A green-tech company website showcasing recycling and sustainable practices with modern design and eco-friendly branding.</p>
         <span class="tag">In Progress</span>
       </div>
       <div class="project">
-        <img src="images/logo.png" alt="SayCheese Photography" />
+        <img src="images/project2.jpg" alt="SayCheese Photography" />
         <h3>SayCheese Photography Website</h3>
         <p>A photography portfolio website designed for a creative agency featuring stunning galleries and client management.</p>
         <span class="tag">In Progress</span>
@@ -282,18 +259,27 @@
     }
     animateLetterColors();
     setInterval(animateLetterColors, 5000);
-    // Smooth scroll for 'Hire Me' button
+    // Smooth scroll for all nav links (including Hire Me)
     document.addEventListener('DOMContentLoaded', function() {
-      const hireMeBtn = document.querySelector('a.btn.secondary[href="#contact"]');
-      if (hireMeBtn) {
-        hireMeBtn.addEventListener('click', function(e) {
+      const navbar = document.querySelector('.navbar');
+      const navLinks = document.querySelectorAll('nav a[href^="#"], a.btn.secondary[href="#contact"]');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          const hash = this.getAttribute('href');
+          if (hash && hash.startsWith('#')) {
+            const target = document.querySelector(hash);
+            if (target) {
           e.preventDefault();
-          const contactSection = document.getElementById('contact');
-          if (contactSection) {
-            contactSection.scrollIntoView({ behavior: 'smooth' });
+              const navbarHeight = navbar ? navbar.offsetHeight : 0;
+              const targetTop = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+              window.scrollTo({
+                top: targetTop,
+                behavior: 'smooth'
+              });
+            }
           }
         });
-      }
+      });
     });
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
@@ -310,6 +296,17 @@
       color: 0xe60000, // red
       backgroundColor: 0x000000
     })
+  </script>
+  <section class="neon-grid-bg"></section>
+  <div id="askme-neon">Ask Me</div>
+  <script>
+    const askMe = document.getElementById('askme-neon');
+    document.addEventListener('mousemove', function(e) {
+      // Offset the text slightly from the cursor
+      const offsetX = 24;
+      const offsetY = 32;
+      askMe.style.transform = `translate(${e.clientX + offsetX}px, ${e.clientY + offsetY}px)`;
+    });
   </script>
 </body>
 </html>
